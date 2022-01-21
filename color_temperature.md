@@ -1,34 +1,34 @@
 # 色温(TC)的概念
 * 色温以绝对温度K来表示，即把标准黑体（例如碳就接近黑体）加热到足够高的温度，即从冷黑加热到白热状态，该物体都会发光，并且随着温度的升高，该灯光的颜色将以可预测的方式移动。温度升高到一定程度时该黑体顏色开始深红-浅红-橙黄-白-蓝，逐渐改变，某光源与黑体的顏色相同时，我们把黑体当的绝对温度称为该光源的色温TC。就是下图一样烤铁一样
-<br><img src=img/02.png width=50%>
+<br><img src=./img/02.png width=50%>
 * 日光对应的色温<br>
-<img src=img/03.png width=50%>
-<img src=img/15.png width=50%>
+<img src=./img/03.png width=50%>
+<img src=./img/15.png width=50%>
 
 ## 色温单位(K)
 * 1800年代后期，当时英国物理学家威廉·开尔文（William Kelvin）加热了一块碳。它在热量中发光，在不同的温度下产生各种不同的颜色，制定出了一套色温计算法，为了纪念他的杰出贡献，色温以开氏温度（K）表示。
-<br><img src=img/04.png width=50%>
+<br><img src=./img/04.png width=50%>
 ## 国际标准的色温区分根据 CIE1931 色度图进行，下图中间那个黑线（也叫普朗克曲线）就是代表黑体产生不同颜色的标准-色温
 * CIE1931的色度坐标图
-<br><img src=img/05.png width=50%>
+<br><img src=./img/05.png width=50%>
 ## 麦克亚当椭圆理论（McAdam Ellipse Theory）
 * 1942年，科学家麦克亚当使用相关色温对25种颜色进行了实验，对每个色点的约5至9个相对侧进行了测量，并在它们能够区分色差时记录了这两个点。结果是一些大小和长度不同的椭圆，称为MacAdam椭圆麦克亚当椭圆理论
-<br><img src=img/06.png width=50%>  
-<br><img src=img/07.png width=50%>  
-<br><img src=img/08.png width=50%>  
+<br><img src=./img/06.png width=50%>  
+<br><img src=./img/07.png width=50%>  
+<br><img src=./img/08.png width=50%>  
 ## 色温公差
 * 但是在黑体辐射线附近的的都是叫3000k。让人感觉的偏绿的3000k，偏红的也叫3000k,如图
-<br><img src=img/09.png width=50%>  
+<br><img src=./img/09.png width=50%>  
 * 下面这几个LED发光对应的色温实际效果的和色度图对应。例如J点的LED落到3000k黑体辐射线下方，所以会有偏红一点，所以在相关色温CCT是有容许的公差
-<br><img src=img/10.png width=50%> 
+<br><img src=./img/10.png width=50%> 
 ## SDCM（色容差）
 * SDCM：表征由光学颜色检测系统软件和标准光源计算出的在麦克亚当椭圆理论的X和Y值之间的差异。数量越少，产品的光色坐标与标准值越接近，光源发出的光谱与黑辐射线范围之间的差异就越小，精度越高，光的颜色就越纯。
 
 * SDCM，是照明灯色坐标与某色温的标准点的坐标相比，例如色温6500K的标准点的坐标是X=0.313、Y=0.337。色容差的单位是SDCM，是基于CIE1931(x,y)色度系统的。Duv是基于CIE1976(u,v)色度系统的，表示被测光源色点(u,v)距离普朗克黑体辐射曲线的距离。
-<br><img src=img/11.png width=50%> 
+<br><img src=./img/11.png width=50%> 
 * 色容差和Duv都可以用来表示颜色的差异，只是计算系统和表达方式不一样，所参考的标准光源色点也不一样。7SDCM大致与Duv /-0.006相当，3SDCM，是Duv /-0.003
 * 就是下面放大图从0~7的sdcm（色容差）区间
-<br><img src=img/12.png width=50%> 
+<br><img src=./img/12.png width=50%> 
 
 ## SDCM标准
 * 世界上有三种主要的SDCM标准类型：
@@ -42,11 +42,11 @@
 * 实际的色容差:灯具的色容差必须控制在≤3sdcm内，才让肉眼没感觉到色差
   
     现在LED技术基本都能控制到3sdcm以内，甚至达到1sdcm以内
- <br><img src=img/13.png width=50%> 
- <br><img src=img/14.png width=50%> 
+ <br><img src=./img/13.png width=50%> 
+ <br><img src=./img/14.png width=50%> 
 
 # 各种物体对应的色温
-<img src=img/01.png width=50%>
+<img src=./img/01.png width=50%>
 
 # 暖光和冷光
 冷光和暖光主要是由光源的色温决定的。
