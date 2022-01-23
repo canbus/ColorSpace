@@ -5,6 +5,52 @@
 <img src=./img/03.png width=50%>
 <img src=./img/15.png width=50%>
 
+* 色温等级<br>
+<img src=./img/23.png width=50%>
+<img src=./img/25.png width=50%>
+
+1、2700K~3200K 暖白(白炽灯),黄色光，强穿透力
+
+2、4200K　自然白,白中带黄，(氙气灯)
+
+3、5000K　光全白
+
+4、6000K　正白,光全白，略带蓝色
+
+5、6500K　阳光下的白天
+
+6、7000—8000K白中明显带蓝
+
+7、8000K以上蓝光，穿透力极
+
+* 常见的光源色温：
+
+1700 K：火柴光
+
+1850 K：蜡烛
+
+2800 K：钨灯（白炽灯）的常见色温
+
+3000 K：卤素灯及黄光日光灯的常见色温
+
+3350 K：演播室“CP”灯
+
+3400 K：演播室台灯,、照相泛光灯（不是闪光灯）等...
+
+4100 K：月光、浅黄光日光灯
+
+5000 K：日光
+
+5500 K：平均日光、电子闪光（因厂商而异）
+
+5770 K：有效太阳温度
+
+6420 K：氙弧灯
+
+6500 K：最常见的白光日光灯色温
+
+9300 K：电视屏幕（模拟）
+
 ## 色温单位(K)
 * 1800年代后期，当时英国物理学家威廉·开尔文（William Kelvin）加热了一块碳。它在热量中发光，在不同的温度下产生各种不同的颜色，制定出了一套色温计算法，为了纪念他的杰出贡献，色温以开氏温度（K）表示。
 <br><img src=./img/04.png width=50%>
@@ -48,6 +94,16 @@
 # 各种物体对应的色温
 <img src=./img/01.png width=50%>
 
+# 蓝光
+高色温会带来更多的蓝光，我们可以在下图中看到色温超过3000K，蓝光的能量就突然增加了，蓝光是属于波长400-480纳米之间的高能量短波，蓝光对视网膜的危害程度最大。家居照明中我们应该尽量避免采用高色温灯光照明
+
+<img src=./img/24.png width=50%>
+
+台灯光源为何不宜超过4000K
+
+在最新版GB/T 9473-2017国家标准《读写作业台灯性能要求》中指出夜间使用建议不大4000K
+
+
 # 暖光和冷光
 冷光和暖光主要是由光源的色温决定的。
 
@@ -56,6 +112,9 @@
 色温在3000K以下时, 光色就有偏红的现象, 给人以温暖的感觉。叫暖光。
 
 白天的自然光源属于较高的色温，而到了黄昏的自然光源属于低色温，因此人类的大脑在高色温照明下会比较有精神，而在低色温照明下则会认为该睡了
+
+# 双色温灯
+双色温是由两种色温的 LED灯珠 组成，一组一般为3000K色温，另一组为6000K色温。 使用时可以分别选用这两种色温，也可以让它们组成混光，此时色温在4000多K，以满足不同色调的需要
 
 # 双色温PWM计算
 色温合成通常用:双色温LED，冷光+暖光
@@ -72,9 +131,20 @@ b=y/(1+c)
 a=y*c/(1+c) 或 a=y-b
 ```
 ``` c
-    uint8_t color_temperature, brightness;
-    uint8_t warm_tmp = color_temperature * brightness / 100;
-    uint8_t cold_tmp = (100 - color_temperature) * brightness / 100;
+ /** 简单的双色温调节
+ * @brief Set the Color Temperature object
+ * 
+ * @param color_temperature [0-100]
+ * @param brightness [0-100]
+ */
+void setColorTemperature(uint8_t color_temperature,uint8_t brightness)
+{
+    //uint8_t color_temperature, brightness;
+    uint8_t warm_tmp = (100 - color_temperature) * brightness / 100;
+    uint8_t cold_tmp = color_temperature * brightness / 100;
     warm_tmp         = warm_tmp < 15 ? warm_tmp : 14 + warm_tmp * 86 / 100;
     cold_tmp         = cold_tmp < 15 ? cold_tmp : 14 + cold_tmp * 86 / 100;
+    printf("warm:%d,cold:%d\n",warm_tmp,cold_tmp);
+}
+
 ```
